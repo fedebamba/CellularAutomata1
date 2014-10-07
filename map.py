@@ -2,7 +2,17 @@ import pygame,math,cell
 
 
 class Map:
-    def __init__(self,dimX,dimY):
-        self.dimX = dimX
-        self.dimY = dimY
-        self.dList = [cell.Cell(x,y) for x in range(self.dimX) for y in range(self.dimY)]
+
+    X = 0
+    Y = 0
+
+    def __init__(self, x=10, y=10):
+        self.X = x
+        self.Y = y
+        self.dList = [cell.Cell for i in xrange(self.X * self.Y)]
+
+    def __getitem__(self, (x, y)):
+        return self.dList[(y * self.X) + x]
+
+    def __setitem__(self, (x, y), value):
+        self.dList[(y * self.X) + x] = value
