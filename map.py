@@ -9,7 +9,10 @@ class Map:
     def __init__(self, x=10, y=10):
         self.X = x
         self.Y = y
-        self.dList = [cell.Cell for i in xrange(self.X * self.Y)]
+        self.dList = []
+        for i in xrange():
+            self.dlist.append(cell.Cell())
+
 
     def __getitem__(self, (x, y)):
         return self.dList[(y * self.X) + x]
