@@ -6,3 +6,9 @@ class Cell:
 
     def addActor(self, actor):
         self.Actor.append(actor)
+
+    def getTree(self):
+        pass
+
+    def getPlant(self):
+        pass
